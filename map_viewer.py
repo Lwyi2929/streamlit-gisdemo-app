@@ -31,6 +31,16 @@ m.add_gdf(
     highlight=False,
 )
 
+county_url="Tainan_county.zip"
+county_gdf=gpd.read_file(county_url)    
+
+m.add_gdf(
+    county_gdf,
+    layer_name="台南市",
+    style={"fillOpacity": 0, "color": "black", "weight": 0.5},
+    highlight=False,
+)
+
 m.add_layer_control()
 
 # 顯示地圖
