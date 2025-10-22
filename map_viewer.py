@@ -5,7 +5,10 @@ import geopandas as gpd
 # Set page config before any Streamlit output
 st.set_page_config(layout="wide")
 
-option = st.selectbox(
+with st.sidebar:
+    st.header("側邊攔")
+
+    option = st.selectbox(
     "請選擇底圖",
     ("OpenTopoMap", "Esri.WorldImagery", "CartoDB.DarkMatter"),
 )
