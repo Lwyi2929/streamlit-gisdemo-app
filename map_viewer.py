@@ -39,6 +39,17 @@ except Exception as e:
     st.stop()
 
 
+# --- 資料檢查與概覽 (新增) ---
+st.subheader("地理資料概覽")
+if gdf.empty:
+    st.warning("GeoDataFrame 載入成功，但內容為空。地圖將無法顯示邊界。")
+    st.stop()
+else:
+    # 顯示前五筆資料，確認欄位名稱和內容
+    st.write(f"成功載入 {len(gdf)} 筆資料，欄位如下：")
+    st.dataframe(gdf[['COUNTYNAME', 'TOWNNAME', 'geometry']].head())
+    
+
 st.markdown(f"**目前選擇的底圖:** `{selected_option}`")
 
 # --- 初始化 Leafmap 地圖 ---
@@ -56,10 +67,10 @@ m.add_gdf(
     layer_name="台灣鄉鎮市區界線",
     style={
         "fillColor": "#4d9221", # 填充色 (綠色系)
-        "color": "#1b7837",     # 邊線顏色 (深綠)
+        "color": "#ffffff",     # 邊線顏色改為白色，在深色底圖上更顯眼
         "weight": 1.5,          # 邊線粗細
         "fillOpacity": 0.05,    # 填充透明度
-        "opacity": 0.8          # 邊線透明度
+        "opacity": 1.0          # 邊線透明度提高到 1.0
     },
     tooltip=["COUNTYNAME", "TOWNNAME"] # 滑鼠懸停時顯示縣市和鄉鎮名稱
 )
