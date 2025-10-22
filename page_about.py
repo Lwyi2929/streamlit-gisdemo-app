@@ -11,6 +11,7 @@ with st.sidebar:
 )
 # (Slider)
     year = st.slider("/[~:", 1990, 2030, 2024)
+    
 # 2. ¿¯ Widgets öÿ
 st.write(f"oöo: {option}")
 st.write(f"oö~o: {year}")
@@ -22,5 +23,4 @@ if st.button("s!"):
 "Nóoö Shapefile (.zip) v GeoTIFF (.tif) v GeoJSON (.json)",
 type=["zip", "tif", "json"]
 )
-if uploaded_file is not None:
-    st.success(f"oNó: {uploaded_file.name} (//: {uploaded_file.size} bytes)")
+if uploaded_file is not None:st.success(f"oNó: {uploaded_file.name} (//: {uploaded_file.size} bytes)")
