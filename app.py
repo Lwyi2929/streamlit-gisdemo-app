@@ -9,8 +9,8 @@ st.Page("page_about.py", title="關於我們", icon="🩷")
 ]
 # 2. 使用 st.navigation() 建立導覽 (例如在側邊攔)
 with st.sidebar:
-st.title("App 導覽")
+    st.title("App 導覽")
 # st.navigation() Þóö¿¯
-selected_page = st.navigation(pages)
+    selected_page = st.navigation(pages)
 # 3. ¯ö¿¯
 selected_page.run()
