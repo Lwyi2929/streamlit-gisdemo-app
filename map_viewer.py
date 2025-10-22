@@ -13,7 +13,7 @@ with st.sidebar:
     ("OpenTopoMap", "Esri.WorldImagery", "CartoDB.DarkMatter"),
 )
 
-st.title("Leafmap + GeoPandas")
+st.title("Leafmap + GeoPandas:台南市媽祖廟宇分布圖")
 
 url="Tainan_temple_mazhou.zip"
 gdf=gpd.read_file(url)
