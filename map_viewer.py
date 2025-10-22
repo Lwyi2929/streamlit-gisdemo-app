@@ -31,7 +31,7 @@ def load_data(url):
     return gpd.read_file(url)
 
 try:
-    gdf = load_data(url)    
+    gdf = load_data(url) 
     
 except Exception as e:
     # 顯示錯誤訊息並停止應用程式
