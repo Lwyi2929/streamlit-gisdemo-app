@@ -4,8 +4,8 @@ import streamlit as st
 # Emoji Wÿhttps://tw.piliapp.com/emoji/list/
 pages = [
 st.Page("page_about.py", title="關於我", icon="🩷")
-st.Page("page_map.py", title="互動地圖瀏覽", icon="🌎")
-]
+st.Page("page_map.py", title="互動地圖瀏覽", icon="🌎")]
+
 # 2. 使用 st.navigation() 建立導覽 (例如在側邊攔)
 with st.sidebar:
     st.title("App 導覽")
