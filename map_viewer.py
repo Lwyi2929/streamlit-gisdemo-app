@@ -12,7 +12,7 @@ with st.sidebar:
 )
     
 
-url="https://raw.githubusercontent.com/giswqs/leafmap/main/examples/data/countries.geojson"
+url="https://maps.nlsc.gov.tw/download/鄉鎮市區界線(TWD97經緯度).zip"
 gdf = gpd.read_file(url)    
 
 st.write(f"你選擇的底圖是: {option}")
