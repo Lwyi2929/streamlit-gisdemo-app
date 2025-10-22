@@ -14,8 +14,7 @@ year = st.slider("選擇一個年份", 1990, 2030, 2024)
 st.write(f"你選擇的軟體是: {option}")
 st.write(f"你選擇的年份是: {year}")
 # 按鈕 (Button)
-if st.button("點我顯示氣球!"):
-st.balloons()
+if st.button("點我顯示氣球!"):st.balloons()
 # 檔案上傳 (File Uploader) 地理系必備!
 uploaded_file = st.file_uploader(
 "上傳你的 Shapefile (.zip) 或 GeoTIFF (.tif) 或 GeoJSON (.json)",
