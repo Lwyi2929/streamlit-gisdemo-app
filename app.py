@@ -20,5 +20,4 @@ uploaded_file = st.file_uploader(
 "上傳你的 Shapefile (.zip) 或 GeoTIFF (.tif) 或 GeoJSON (.json)",
 type=["zip", "tif", "json"]
 )
-if uploaded_file is not None:
-st.success(f"你上傳了: {uploaded_file.name} (大小: {uploaded_file.size} bytes)")
+if uploaded_file is not None:st.success(f"你上傳了: {uploaded_file.name} (大小: {uploaded_file.size} bytes)")
