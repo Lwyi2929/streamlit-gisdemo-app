@@ -10,7 +10,7 @@ with st.sidebar:
 
     option = st.selectbox(
     "請選擇底圖",
-    ("OpenTopoMap", "Esri.WorldImagery", "CartoDB.DarkMatter"),
+    ("OpenStreetMap","OpenTopoMap" "Esri.WorldImagery", "CartoDB.DarkMatter"),
 )
 
 st.title("Leafmap + GeoPandas:台南市媽祖廟宇分布圖")
@@ -31,13 +31,18 @@ m.add_gdf(
     highlight=False,
 )
 
+
 county_url="Tainan_county.zip"
 county_gdf=gpd.read_file(county_url)    
-
 m.add_gdf(
     county_gdf,
     layer_name="台南市",
-    style={"fillOpacity": 0, "color": "black", "weight": 0.5},
+    style={
+        "fillColor": "lightgreen",  # 面的顏色改成淺綠色
+        "fillOpacity": 0.5,         # 面的透明度改成 50% (0.5)
+        "color": "black",           # 邊框顏色維持黑色
+        "weight": 0.5               # 邊框粗細維持 0.5
+    },
     highlight=False,
 )
 
