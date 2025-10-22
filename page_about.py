@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
-st.title("Streamlit  Widgets")
+st.title("關於我")
+
+st.header("李玟儀的 GIS 專題")
+st.write("")
+
+
 # 1. ê Widgets t (sidebar)
 with st.sidebar:
     st.header("ot")
@@ -11,7 +16,7 @@ with st.sidebar:
 )
 # (Slider)
     year = st.slider("/[~:", 1990, 2030, 2024)
-    
+
 # 2. ¿¯ Widgets öÿ
 st.write(f"oöo: {option}")
 st.write(f"oö~o: {year}")
