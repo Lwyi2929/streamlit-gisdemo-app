@@ -10,7 +10,7 @@ with st.sidebar:
 
     option = st.selectbox(
     "請選擇底圖",
-    ("OpenStreetMap","OpenTopoMap" "Esri.WorldImagery", "CartoDB.DarkMatter"),
+    ("OpenStreetMap","OpenTopoMap" ,"Esri.WorldImagery", "CartoDB.DarkMatter"),
 )
 
 st.title("Leafmap + GeoPandas:台南市媽祖廟宇分布圖")
